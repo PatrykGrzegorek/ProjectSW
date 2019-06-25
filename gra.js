@@ -35,11 +35,10 @@ for (var i = 0; i < dlugosctab; i++) {
       document.getElementById(i).style.border = "1px solid rgb(59, 159, 179)";
     } else if (i == 105 || i == 85 || i == 121 || i == 138) {
       document.getElementById(i).style.backgroundColor = "rgb(173, 56, 56)";
-      document.getElementById(i).style.border = "2px solid rgb(151, 0, 0)";
     }
   } else {
     document.getElementById("gra1").innerHTML +=
-      "<div class='klocki1' id='" + i + "'> </div>  ";
+      "<div class='klocki' id='" + i + "'> </div>  ";
     if ((i + 1) % szerokosc == 0) {
       document.getElementById("gra1").innerHTML +=
         "<div style='clear:both;'></div>";
@@ -60,14 +59,11 @@ for (var i = 0; i < dlugosctab; i++) {
       document.getElementById(i).style.border = "2px solid rgb(46, 46, 46)";
     } else if (i == 238 || i == 345) {
       document.getElementById(i).style.backgroundColor = "rgb(173, 56, 56)";
-      document.getElementById(i).style.border = "2px solid rgb(151, 0, 0)";
     }
   }
 }
-document.getElementById(11).style.backgroundColor = "rgb(218, 163, 81)";
-document.getElementById(11).style.border = "2px solid rgb(146, 100, 39)";
+document.getElementById(11).style.backgroundColor = "rgb(30, 30, 30)";
 document.getElementById(388).style.backgroundColor = "rgb(0, 0, 0)";
-document.getElementById(388).style.border = "2px solid rgb(30, 30, 30)";
 document.addEventListener("keydown", key);
 function key(e) {
   var keyCode = e.keyCode;
@@ -92,13 +88,9 @@ function key(e) {
             tab[i - 1] = 1;
             tab[i] = 0;
             document.getElementById(i - 1).style.backgroundColor =
-              "rgb(218, 163, 81)";
-            document.getElementById(i - 1).style.border =
-              "2px solid rgb(146, 100, 39)";
+              "rgb(30, 30, 30)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(79, 173, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(0, 124, 0)";
+              "rgba(0, 0, 0, 0)";
             licznik++;
 
             break;
@@ -120,13 +112,9 @@ function key(e) {
             tab[i - 1] = 1;
             tab[i] = 0;
             document.getElementById(i - 1).style.backgroundColor =
-              "rgb(59, 45, 18)";
-            document.getElementById(i - 1).style.border =
-              "2px solid rgb(41, 30, 0)";
+              "rgb(70, 70, 70)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(173, 132, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(124, 91, 0)";
+              "rgba(0, 0, 0, 0)";
             licznik++;
 
             break;
@@ -155,13 +143,9 @@ function key(e) {
             tab[i + 1] = 1;
             tab[i] = 0;
             document.getElementById(i + 1).style.backgroundColor =
-              "rgb(218, 163, 81)";
-            document.getElementById(i + 1).style.border =
-              "2px solid rgb(146, 100, 39)";
+              "rgb(30, 30, 30)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(79, 173, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(0, 124, 0)";
+              "rgba(0, 0, 0, 0)";
 
             licznik++;
 
@@ -185,12 +169,8 @@ function key(e) {
 
             tab[i + 1] = 1;
             tab[i] = 0;
-            document.getElementById(i + 1).style.border =
-              "2px solid rgb(41, 30, 0)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(173, 132, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(124, 91, 0)";
+              "rgba(0, 0, 0, 0)";
             if (
               document.getElementById(i + 1).style.backgroundColor ==
               "rgb(0, 0, 0)"
@@ -198,7 +178,7 @@ function key(e) {
               koniec();
             }
             document.getElementById(i + 1).style.backgroundColor =
-              "rgb(59, 45, 18)";
+              "rgb(70, 70, 70)";
 
             break;
           }
@@ -225,14 +205,9 @@ function key(e) {
             tab[i - szerokosc] = 1;
             tab[i] = 0;
             document.getElementById(i - szerokosc).style.backgroundColor =
-              "rgb(218, 163, 81)";
-            document.getElementById(i - szerokosc).style.border =
-              "2px solid rgb(146, 100, 39)";
+              "rgb(30, 30, 30)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(79, 173, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(0, 124, 0)";
-
+              "rgba(0, 0, 0, 0)";
             licznik++;
 
             break;
@@ -254,16 +229,12 @@ function key(e) {
             tab[i - szerokosc] = 1;
             tab[i] = 0;
             document.getElementById(i - szerokosc).style.backgroundColor =
-              "rgb(59, 45, 18)";
-            document.getElementById(i - szerokosc).style.border =
-              "2px solid rgb(41, 30, 0)";
+              "rgb(70, 70, 70)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(173, 132, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(124, 91, 0)";
+              "rgba(0, 0, 0, 0)";
             if (tab[i - szerokosc] == tab[194]) {
               document.querySelector("body").style.backgroundImage =
-                "url(tlo.jpg)";
+                "url(tlodiv.jpg)";
             }
 
             licznik++;
@@ -294,17 +265,13 @@ function key(e) {
             tab[i + szerokosc] = 1;
             tab[i] = 0;
             document.getElementById(i + szerokosc).style.backgroundColor =
-              "rgb(218, 163, 81)";
-            document.getElementById(i + szerokosc).style.border =
-              "2px solid rgb(146, 100, 39)";
+              "rgb(30, 30, 30)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(79, 173, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(0, 124, 0)";
+              "rgba(0, 0, 0, 0)";
             licznik++;
             if (tab[i + szerokosc] == tab[204]) {
               document.querySelector("body").style.backgroundImage =
-                "url(tlo1.jpg)";
+                "url(tlo20.jpg)";
             }
 
             break;
@@ -326,13 +293,9 @@ function key(e) {
             tab[i + szerokosc] = 1;
             tab[i] = 0;
             document.getElementById(i + szerokosc).style.backgroundColor =
-              "rgb(59, 45, 18)";
-            document.getElementById(i + szerokosc).style.border =
-              "2px solid rgb(41, 30, 0)";
+              "rgb(70, 70, 70)";
             document.getElementById(i).style.backgroundColor =
-              "rgb(173, 132, 56)";
-            document.getElementById(i).style.border =
-              " 1px solid rgb(124, 91, 0)";
+              "rgba(0, 0, 0, 0)";
 
             licznik++;
 
@@ -347,10 +310,9 @@ function key(e) {
 
 function koniec() {
   document.getElementById("wynik").innerHTML =
-    " Brawo! Umarłeś :) W swoim życiu wykonaleś " +
+    " Brawo! Umarłeś :) W swoim życiu pokonałeś " +
     licznik +
-    " kroków i zjadłeś " +
+    " lat świetlnych i zniszczyłeś " +
     magazyn +
-    " kawałków mięsa. Gratulacje!!! Jednak wróciłeś i możesz żyć dalej.";
-  document.getElementById(388).style.border = "2px solid rgb(255, 238, 0)";
+    " statków. Gratulacje!!! Jednak wróciłeś i możesz latać dalej.";
 }

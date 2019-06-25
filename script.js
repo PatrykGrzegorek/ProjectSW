@@ -3,6 +3,8 @@ var z;
 var hero;
 var home;
 var swat;
+var licznik = 0;
+var time2;
 function strony(str)
 {
 
@@ -23,8 +25,51 @@ fetch('https://swapi.co/api/people/')
 function swiat(swat, hero)
 {
    document.getElementById(hero).innerHTML +="<div class='planet'>"+"<i class='fas fa-globe'></i>"+swat+"</div>";
+   licznik++;
+   if(licznik==10)
+   {
+      clearInterval(time2);
+      document.getElementById("load").innerHTML = "";
+      licznik=0;
+
+   }
 
 }
+
+
+
+var time = setInterval(function()
+{
+   // console.log("Ładowanie");
+   document.getElementById("load").innerHTML = "<i class='fab fa-galactic-republic'></i> Loading...";
+
+},1000);
+
+function bohaterowie(z)
+{
+   time2 = setInterval(function()
+   {
+      console.log("ŁadowanieBOHATERA");
+      document.getElementById("load").innerHTML = "<i class='fab fa-galactic-republic'></i> Loading...";
+
+   },1000);
+
+   document.getElementById('hero').innerHTML ="";
+    fetch('https://swapi.co/api/people/?page='+z)
+    .then(function(response){
+        return response.json();
+     })
+     .then(function(jsonData){
+        jsonData.results.forEach(function(item)
+        {
+            hero(item.name,item.homeworld);
+     });
+
+  });
+}
+
+
+
 function hero(hero,home)
 {
 
@@ -38,29 +83,6 @@ function hero(hero,home)
     .then(function(jsonData){
        swiat(jsonData.name, hero)
       });
+
+
 }
-
-var time = setInterval(function()
-{
-   console.log("Ładowanie");
-   document.getElementById("load").innerHTML = "<i class='fab fa-galactic-republic'></i> Loading...";
-
-},1000);
-
-function bohaterowie(z)
-{
-   document.getElementById('hero').innerHTML ="";
-    fetch('https://swapi.co/api/people/?page='+z)
-    .then(function(response){
-        return response.json();
-     })
-     .then(function(jsonData){
-        jsonData.results.forEach(function(item)
-        {
-            hero(item.name,item.homeworld);
-     });
-  });
-}
-
-
-
