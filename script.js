@@ -31,6 +31,8 @@ function swiat(swat, hero)
       clearInterval(time2);
       document.getElementById("load").innerHTML = "";
       licznik=0;
+      document.getElementById('hero').classList.remove('hidden');
+      document.getElementById('hero').classList.add('col-sm-12 col-md-12 col-lg-12');
 
    }
 
@@ -40,13 +42,14 @@ function swiat(swat, hero)
 
 var time = setInterval(function()
 {
-   // console.log("Ładowanie");
+   console.log("Ładowanie");
    document.getElementById("load").innerHTML = "<i class='fab fa-galactic-republic'></i> Loading...";
 
 },1000);
 
 function bohaterowie(z)
 {
+   document.getElementById('hero').classList.add('hidden');
    time2 = setInterval(function()
    {
       console.log("ŁadowanieBOHATERA");

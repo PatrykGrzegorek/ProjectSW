@@ -3,6 +3,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Audiowide', cursive;
 }
 
 .klocki {
@@ -45,4 +46,5 @@ a.tilelink
   font-size: 20px;
   margin-top: 10%;
   margin-bottom: 10%;
+  font-family: 'Audiowide', cursive;
 }

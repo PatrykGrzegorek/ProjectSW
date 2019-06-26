@@ -4,6 +4,7 @@ body
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Audiowide', cursive;
 
 }
 .container
@@ -11,6 +12,7 @@ body
     margin-top: 20px;
     text-align: center;
     color: azure;
+    font-family: 'Audiowide', cursive;
 }
 #load
 {
@@ -80,6 +82,7 @@ body
     margin-right: auto;
     color: azure;
     text-align: center;
+    font-family: 'Audiowide', cursive;
 }
 #pudlo
 {
